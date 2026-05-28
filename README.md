@@ -16,8 +16,4 @@ Um projeto desenvolvido durante o curso do SENAI com o objetivo de praticar conc
 * Estilização moderna
 * Interações com JavaScript
 
-## Objetivo do Projeto
-
-Este projeto foi criado para fins educacionais, com foco na prática de estruturação de páginas, estilização e desenvolvimento de interfaces web.
-
 
