@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iasmin Lapa — Semijoias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="topbar">✦ &nbsp; Semijoias banhadas em ouro & prata &nbsp; ✦ &nbsp; Envio para todo o Brasil &nbsp; ✦
+  </div>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">Iasmin <span>Lapa</span></a>
+      <nav>
+        <a href="#produtos">Produtos</a>
+        <a href="https://api.whatsapp.com/send?phone=31987076324&text=Olá!%20Tudo%20Bem?" target="_blank"
+          class="nav-contact">Contato via WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Semijoias que <em>encantam</em></h1>
+        <p>Peças únicas em ouro e prata, criadas para realçar a beleza de quem as usa. Da elegância clássica ao design
+          contemporâneo.</p>
+        <div class="hero-contact">
+          <a href="#produtos" class="btn-primary">Ver Coleção</a>
+          <a href="https://api.whatsapp.com/send?phone=31987076324&text=Olá!%20Tudo%20Bem?" target="_blank"
+            class="btn-outline">WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">69</div>
+            <div class="stat-label">Produtos</div>
+          </div>
+          <div>
+            <div class="stat-num">11</div>
+            <div class="stat-label">Categorias</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Qualidade</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-gem">◇</div>
+      </div>
+    </section>
+
+    <div class="categories-section">
+      <div class="categories-inner">
+        <span class="cat-label">Filtrar:</span>
+        <button class="cat-pill active" data-filter="all">Todos</button>
+        <button class="cat-pill" data-filter="Anel">Anéis (8)</button>
+        <button class="cat-pill" data-filter="Argola">Argolas (10)</button>
+        <button class="cat-pill" data-filter="Brinco">Brincos (23)</button>
+        <button class="cat-pill" data-filter="Choker">Chokers (5)</button>
+        <button class="cat-pill" data-filter="Conjunto">Conjuntos (2)</button>
+        <button class="cat-pill" data-filter="Corrente">Correntes (1)</button>
+        <button class="cat-pill" data-filter="Gargantilha">Gargantilhas (2)</button>
+        <button class="cat-pill" data-filter="Pingente">Pingentes (5)</button>
+        <button class="cat-pill" data-filter="Pulseira">Pulseiras (8)</button>
+        <button class="cat-pill" data-filter="Tornozeleira">Tornozeleiras (2)</button>
+        <button class="cat-pill" data-filter="Trio">Trios (3)</button>
+      </div>
+    </div>
+
+    <section class="products-section" id="produtos">
+      <div class="section-header">
+        <h2 class="section-title">Nossa <em>Coleção</em></h2>
+        <span class="product-count" id="count-label">69 peças</span>
+      </div>
+      <div class="products-grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Iasmin <span>Lapa</span></div>
+        <p class="footer-desc">Semijoias cuidadosamente selecionadas para quem valoriza qualidade e estilo. Peças em
+          ouro e prata para todas as ocasiões.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <a href="#" onclick="filterBy('Anel')">Anéis</a>
+        <a href="#" onclick="filterBy('Brinco')">Brincos</a>
+        <a href="#" onclick="filterBy('Argola')">Argolas</a>
+        <a href="#" onclick="filterBy('Pulseira')">Pulseiras</a>
+        <a href="#" onclick="filterBy('Conjunto')">Conjuntos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://api.whatsapp.com/send?phone=31987076324" target="_blank">📱 (31) 98707-6324</a>
+        <a href="mailto:iasminlapa013@gmail.com">✉ iasminlapa013@gmail.com</a>
+        <p>WhatsApp disponível para dúvidas e encomendas</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Iasmin Lapa Semijoias</span>
+      <span>Desenvolvido por <span class="thg">Freitas</span> <a href="https://freitass.netlify.app/"> <br> (Clique aqui para mais detalhes) </a>  </span>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-bg" id="modal-bg" onclick="closeModal(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+      <div class="modal-img"><img id="modal-img" src="" alt=""></div>
+      <div class="modal-details">
+        <div class="modal-cat" id="modal-cat"></div>
+        <div class="modal-name" id="modal-name"></div>
+        <div class="modal-code" id="modal-code"></div>
+        <div class="modal-price" id="modal-price"></div>
+        <a class="modal-buy" id="modal-buy" href="#" target="_blank">Comprar via WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
