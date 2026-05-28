@@ -16,4 +16,6 @@ Um projeto desenvolvido durante o curso do SENAI com o objetivo de praticar conc
 * Estilização moderna
 * Interações com JavaScript
 
+## Visite meu projeto
 
+https://joiaslapa.netlify.app/
